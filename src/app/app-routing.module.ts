@@ -3,14 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { HomePageModule } from './pages/home.page-module';
 
-const routes: Routes = [{ 
-        path: 'o-nas', 
-        loadChildren: () => AboutUsPageModule
-      },
-  { 
-        path: 'home', 
-        loadChildren: () => HomePageModule
-      }
+const routes: Routes = [{
+  path: 'o-nas',
+  loadChildren: () => AboutUsPageModule
+},
+{
+  path: 'home',
+  loadChildren: () => HomePageModule
+}
 ];
 
 @NgModule({
