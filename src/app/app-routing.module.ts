@@ -8,7 +8,7 @@ const routes: Routes = [{
   loadChildren: () => AboutUsPageModule
 },
 {
-  path: 'home',
+  path: '',
   loadChildren: () => HomePageModule
 }
 ];
