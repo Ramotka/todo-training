@@ -1,11 +1,16 @@
-<ul class="nav bg-dark justify-content-center">
+<ul class="nav justify-content-center" style="background-color: #D2BDB2">
     <li class="nav-item">
-        <a class="btn fs-4 p-3 btn-dark" routerLink="/" role="button">Home</a>
+        <a class="nav-link p-3 fs-4 text-dark" aria-current="page" routerLink="/">Strona główna</a>
     </li>
     <li class="nav-item">
-        <a class="btn fs-4 p-3 btn-dark" routerLink="o-nas" role="button">O nas</a>
+        <a class="nav-link p-3 fs-4 text-dark" routerLink="/o-nas">O nas</a>
     </li>
-</ul>
+    <li class="nav-item">
+        <a class="nav-link p-3 fs-4 text-dark" routerLink="/pracownik">Pracownicy</a>
+    </li>
+  </ul>
 <div class="container-fluid">
-    <router-outlet></router-outlet>
+    <section class="p-3 p-md-5 bg-white">
+        <router-outlet></router-outlet>
+    </section>
 </div>
