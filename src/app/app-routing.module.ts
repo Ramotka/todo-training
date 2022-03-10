@@ -9,10 +9,12 @@ const routes: Routes = [{
   path: 'o-nas',
   loadChildren: () => AboutUsPageModule
 },
+
 {
   path: '',
   loadChildren: () => HomePageModule
 },
+
   { 
         path: 'pracownik', 
         loadChildren: () => EmployeesPageModule
