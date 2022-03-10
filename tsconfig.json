@@ -12,6 +12,10 @@
     "importHelpers": true,
     "target": "es2015",
     "paths": {
+      "designers": [
+        "dist/designers/designers",
+        "dist/designers"
+      ],
       "projektanci": [
         "dist/projektanci/projektanci",
         "dist/projektanci"
