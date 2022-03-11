@@ -1,25 +1,9 @@
 <div class="row">
-    <div class="col">
+    <div class="col" *ngFor="let project of projects">
         <div class="card text-center" style="width: 25rem;">
-            <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="card-img-top" alt="Projekt 1">
-            <div class="card-body">
-                <h4><b>Projekt 1</b></h4>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card text-center" style="width: 25rem;">
-            <img src="https://images.pexels.com/photos/6587847/pexels-photo-6587847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="Projekt 2">
-            <div class="card-body">
-                <h4><b>Projekt 2</b></h4>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card text-center" style="width: 25rem;">
-            <img src="https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="Projekt 3">
-            <div class="card-body">
-                <h4><b>Projekt 3</b></h4>
+            <img [src]="project.src" class="card-img-top" [alt]="project.alt">
+            <div class="card-body bg-light">
+                <h4><b>{{project.name}}</b></h4>
             </div>
         </div>
     </div>
