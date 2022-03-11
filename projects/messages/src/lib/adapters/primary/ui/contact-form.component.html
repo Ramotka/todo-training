@@ -1,1 +1,2 @@
 <h1 (click)="onClick()">{{contact}}</h1>
+<form (ngSubmit)="submit(kontakt)" [formGroup]="kontakt"><input type="text" formControlName="email" placeholder="Email"><input type="text" formControlName="imie" placeholder="Imie"><input type="submit" value="Submit"></form>
