@@ -20,6 +20,10 @@
         "dist/messages/messages",
         "dist/messages"
       ],
+      "projects": [
+        "dist/projects/projects",
+        "dist/projects"
+      ],
       "projektanci": [
         "dist/projektanci/projektanci",
         "dist/projektanci"
