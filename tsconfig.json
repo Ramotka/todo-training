@@ -16,6 +16,10 @@
         "dist/designers/designers",
         "dist/designers"
       ],
+      "messages": [
+        "dist/messages/messages",
+        "dist/messages"
+      ],
       "projektanci": [
         "dist/projektanci/projektanci",
         "dist/projektanci"

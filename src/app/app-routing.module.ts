@@ -4,6 +4,7 @@ import { AboutUsPageModule } from './pages/about-us.page-module';
 import { HomePageModule } from './pages/home.page-module';
 import { EmployeesPageModule } from './pages/employees.page-module';
 import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
+import { ContactUsPageModule } from './pages/contact-us.page-module';
 
 const routes: Routes = [{
   path: 'o-nas',
@@ -22,6 +23,10 @@ const routes: Routes = [{
   { 
         path: 'pracownik/:name', 
         loadChildren: () => EmployeeDetailsPageModule
+      },
+  { 
+        path: 'kontakt', 
+        loadChildren: () => ContactUsPageModule
       }
 ];
 
