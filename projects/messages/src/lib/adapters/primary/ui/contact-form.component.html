@@ -1,3 +1,4 @@
 <h1 class="mb-5">KONTAKT</h1>
-<form (ngSubmit)="onFormSubmited(kontakt)" [formGroup]="kontakt"><input type="text" formControlName="email" placeholder="Email"><input type="text" formControlName="imie" placeholder="Imie"><input type="submit" value="Submit"></form>
+<div class="mb-5 fs-4">{{contact2}}{{contact3}}</div>
+<form (ngSubmit)="submit(kontakt)" [formGroup]="kontakt"><input type="text" formControlName="email" placeholder="Email"><input type="text" formControlName="imie" placeholder="Imie"><input type="submit" value="Submit"></form>
 <div class="btn mt-5 fs-3 bg-success text-white" role="button" (click)="onClick()">{{contact}}</div>
