@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { DesignersListComponentModule } from '../../../projects/designers/src/lib/adapters/primary/ui/designers-list.component-module';
+import { ContactFormComponentModule } from '../../../projects/messages/src/lib/adapters/primary/ui/contact-form.component-module';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -11,7 +12,8 @@ import { DesignersListComponentModule } from '../../../projects/designers/src/li
           component: HomePage,
         }
       ]),
-  DesignersListComponentModule
+  DesignersListComponentModule,
+  ContactFormComponentModule,
 ],
   	declarations: [HomePage],
   	providers: [],

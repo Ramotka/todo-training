@@ -1,5 +1,4 @@
-export interface EmployeeDTO {
-  readonly bio: string;
+export interface ProjectDTO {
   readonly id: string;
   readonly name: string;
   readonly imageUrl: string;

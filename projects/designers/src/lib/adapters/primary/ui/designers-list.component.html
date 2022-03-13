@@ -1,31 +1,11 @@
 <div class="row">
-    <div class="col">
+    <div class="col" *ngFor="let employee of employees$ | async">
         <div class="card text-center" style="width: 25rem;">
-            <img [src]= "employee1.image" class="card-img-top" [alt]="employee1.alt">
+            <img [src]= "employee.imageUrl" class="card-img-top" [alt]="employee.alt">
             <div class="card-body" style="background-color: #E6E2E0">
-                <h4><b>{{employee1.name}}</b></h4>
-                <p class="fs-5">{{employee1.description}}</p>
+                <h4><b>{{employee.name}}</b></h4>
+                <p class="fs-5">{{employee.bio}}</p>
                 <a routerLink="/pracownik/Leon" class="btn fs-5 btn-light">Kontakt</a>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card text-center" style="width: 25rem;">
-            <img [src]= "employee2.image" class="card-img-top" [alt]="employee2.alt">
-            <div class="card-body" style="background-color: #E6E2E0">
-                <h4><b>{{employee2.name}}</b></h4>
-                <p class="fs-5">{{employee2.description}}</p>
-                <a routerLink="/pracownik/Jadwiga" class="btn fs-5 btn-light">Kontakt</a>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card text-center" style="width: 25rem;">
-            <img [src]= "employee3.image" class="card-img-top" [alt]="employee3.alt">
-            <div class="card-body" style="background-color: #E6E2E0">
-                <h4><b>{{employee3.name}}</b></h4>
-                <p class="fs-5">{{employee3.description}}</p>
-                <a routerLink="/pracownik/Jan" class="btn fs-5 btn-light">Kontakt</a>
             </div>
         </div>
     </div>

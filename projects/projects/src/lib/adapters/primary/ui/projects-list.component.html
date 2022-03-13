@@ -1,7 +1,7 @@
 <div class="row">
-    <div class="col" *ngFor="let project of projects">
+    <div class="col" *ngFor="let project of projects$ | async">
         <div class="card text-center" style="width: 25rem;">
-            <img [src]="project.src" class="card-img-top" [alt]="project.alt">
+            <img [src]="project.imageUrl" class="card-img-top" [alt]="project.alt">
             <div class="card-body bg-light">
                 <h4><b>{{project.name}}</b></h4>
             </div>
