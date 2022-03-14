@@ -11,29 +11,37 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "paths": {
       "designers": [
         "dist/designers/designers",
         "dist/designers"
       ],
+      "@designers": ["projects/designers/src/public-api.ts"],
+
       "messages": [
         "dist/messages/messages",
         "dist/messages"
       ],
+      "@messages": ["projects/messages/src/public-api.ts"],
+
       "projects": [
         "dist/projects/projects",
         "dist/projects"
       ],
+      "@projects": ["projects/projects/src/public-api.ts"],
+
       "projektanci": [
         "dist/projektanci/projektanci",
         "dist/projektanci"
       ]
-    },
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+
+    }
+
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false

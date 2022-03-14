@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
-import { DesignersListComponentModule } from '../../../projects/designers/src/lib/adapters/primary/ui/designers-list.component-module';
-import { ContactFormComponentModule } from '../../../projects/messages/src/lib/adapters/primary/ui/contact-form.component-module';
+import { DesignersListComponentModule } from '@designers';
+import { ContactFormComponentModule } from '@messages';
 
-@NgModule({ imports: [CommonModule, 
+@NgModule({ imports: [CommonModule, ContactFormComponentModule, DesignersListComponentModule,
       RouterModule.forChild([
         {
           path: '',

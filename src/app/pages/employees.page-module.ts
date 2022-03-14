@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { EmployeesPage } from './employees.page';
-import { DesignersListComponentModule } from '../../../projects/designers/src/lib/adapters/primary/ui/designers-list.component-module';
+import { DesignersListComponentModule } from '@designers';
 
-@NgModule({ imports: [CommonModule, 
+@NgModule({ imports: [CommonModule, DesignersListComponentModule,
       RouterModule.forChild([
         {
           path: '',
