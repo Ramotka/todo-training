@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col" *ngFor="let employee of employees$ | async">
         <div class="card text-center" style="width: 25rem;">
-            <img [src]= "employee.imageUrl" class="card-img-top" [alt]="employee.alt">
-            <div class="card-body" style="background-color: #E6E2E0">
+            <img [src]="employee.imageUrl" class="card-img-top" [alt]="employee.alt" />
+            <div class="card-body" style="background-color: #e6e2e0;">
                 <h4><b>{{employee.name}}</b></h4>
                 <p class="fs-5">{{employee.bio}}</p>
                 <a routerLink="/pracownik/{{employee.firstName}}" class="btn fs-5 btn-light">Kontakt</a>
