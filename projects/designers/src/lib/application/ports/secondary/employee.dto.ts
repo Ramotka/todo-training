@@ -1,3 +1,5 @@
+import { DepartmentDTO } from "./department.dto";
+
 export interface EmployeeDTO {
   readonly bio: string;
   readonly id: string;
@@ -5,4 +7,5 @@ export interface EmployeeDTO {
   readonly firstName: string;
   readonly imageUrl: string;
   readonly alt: string;
+  readonly department: DepartmentDTO;
 }

@@ -5,6 +5,8 @@
             <div class="card-body" style="background-color: #e6e2e0;">
                 <h4><b>{{ employee.name }}</b></h4>
                 <p class="fs-5">{{ employee.bio }}</p>
+                <p class="fs-5"><b>Dział: </b>{{ employee.department.name }}</p>
+                <p class="fs-5"><b>Numer pracownika: </b>{{ employee.department.employeeCount }}</p>
                 <a routerLink="/pracownik/{{employee.firstName}}" class="btn fs-5 btn-light">Kontakt</a>
             </div>
         </div>

@@ -12,6 +12,12 @@ export class DesignersListComponent {
             imageUrl: "https://ocdn.eu/pulscms-transforms/1/riDk9kpTURBXy9hYWZkOGM5MmE3YjgxNTU5ZjI4MzFmYWRjNDM0ODc0MC5qcGeSlQNgGs0DPc0B05MFzQFAzQFAgaEwBQ",
             alt: "Leon Kowalski",
             bio: "Ukończył Studium Projektowania Wnętrz w Londynie. Posiada 7-letnie doświadczenie w branży. Jego pasją jest wystrój łazienek i powierzchni biurowych.",
+            department: 
+                {
+                    name: "Łazienki",
+                    employeeCount: 1
+                },
+        
         },
         {
             id: "2",
@@ -20,6 +26,11 @@ export class DesignersListComponent {
             imageUrl: "https://www.economywatch.com/wp-content/uploads/2021/08/Nicole-Kidman-Bitcoin.jpg",
             alt: "Jadwiga Nowak",
             bio: "Ukończyła Architekturę Wnętrz na Uniwersytecie Warszawskim. Posiada 10-letnie doświadczenie w branży. Specjalizuje się w projektowaniu kuchni.",
+            department: 
+            {
+                name: "Kuchnie",
+                employeeCount: 2
+            },
         },
         {
             id: "3",
@@ -28,6 +39,11 @@ export class DesignersListComponent {
             imageUrl: "https://lb0.dstatic.pl/trendContent/38215_smallPicture_1.jpg",
             alt: "Jan Dokładny",
             bio: "Absolwent Wydziału Architektury na Politechnice Wrocławskiej. Zajmuje się tworzeniem dokumentacji technicznej i zestawień.",
+            department: 
+            {
+                name: "Dokumentacja",
+                employeeCount: 3
+            },
         },
 
     ]);
