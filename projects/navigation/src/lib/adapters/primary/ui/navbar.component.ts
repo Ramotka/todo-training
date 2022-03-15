@@ -3,6 +3,8 @@ import {
   ViewEncapsulation,
   ChangeDetectionStrategy,
 } from "@angular/core";
+import { Observable, of } from "rxjs";
+import { NavbarDTO } from "../../../application/ports/secondary/navbar.dto";
 
 @Component({
   selector: "lib-navbar",
@@ -10,4 +12,32 @@ import {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  navbars$: Observable<NavbarDTO[]> = of ([
+    {
+      id: "1",
+      link: "/",
+      nav: "Home",
+    },
+    {
+      id: "2",
+      link: "/o-nas",
+      nav: "O nas",
+    },
+    {
+      id: "3",
+      link: "/pracownik",
+      nav: "Pracownicy",
+    },
+    {
+      id: "4",
+      link: "/projekty",
+      nav: "Projekty",
+    },
+    {
+      id: "5",
+      link: "/kontakt",
+      nav: "Kontakt",
+    },
+  ])
+}

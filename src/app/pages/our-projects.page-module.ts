@@ -6,7 +6,7 @@ import { ProjectsListComponentModule } from "@projects";
 
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule, 
     RouterModule.forChild([
       {
         path: "",
