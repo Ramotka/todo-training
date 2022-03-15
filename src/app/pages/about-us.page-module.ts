@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 import { AboutUsPage } from "./about-us.page";
 import { DesignersListComponentModule } from "@designers";
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -14,6 +15,7 @@ import { DesignersListComponentModule } from "@designers";
       },
     ]),
     DesignersListComponentModule,
+
   ],
   declarations: [AboutUsPage],
   providers: [],

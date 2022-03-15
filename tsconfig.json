@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -12,38 +11,16 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "paths": {
-      "designers": [
-        "dist/designers/designers",
-        "dist/designers"
-      ],
       "@designers": ["projects/designers/src/public-api.ts"],
 
-      "messages": [
-        "dist/messages/messages",
-        "dist/messages"
-      ],
       "@messages": ["projects/messages/src/public-api.ts"],
 
-      "projects": [
-        "dist/projects/projects",
-        "dist/projects"
-      ],
       "@projects": ["projects/projects/src/public-api.ts"],
 
-      "projektanci": [
-        "dist/projektanci/projektanci",
-        "dist/projektanci"
-      ]
-
+      "@navigation": ["projects/navigation/src/index.ts"]
     }
-
   },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
-  }
+  "angularCompilerOptions": { "enableI18nLegacyMessageIdFormat": false }
 }
