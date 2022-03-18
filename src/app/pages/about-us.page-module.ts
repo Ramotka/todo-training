@@ -2,9 +2,8 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { AboutUsPage } from "./about-us.page";
-import { DesignersListComponentModule } from "@designers";
-import { TestComponentModule } from '../../../projects/test/src/lib/adapters/primary/ui/test.component-module';
-import { FirebaseTestServiceModule } from '../../../projects/test/src/lib/adapters/secondary/infrastructure/firebase-test.service-module';
+import { DesignerList2ComponentModule } from '@designers2';
+import { FirebaseEmployees2ServiceModule } from '../../../projects/designers2/src/lib/adapters/secondary/infrastructure/firebase-employees2.service-module';
 
 @NgModule({
   imports: [
@@ -15,9 +14,9 @@ import { FirebaseTestServiceModule } from '../../../projects/test/src/lib/adapte
         component: AboutUsPage,
       },
     ]),
-    DesignersListComponentModule,
-    TestComponentModule,
-    FirebaseTestServiceModule
+   
+    DesignerList2ComponentModule,
+    FirebaseEmployees2ServiceModule
   ],
   declarations: [AboutUsPage],
   providers: [],

@@ -2,7 +2,8 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { EmployeesPage } from "./employees.page";
-import { DesignersListComponentModule } from "@designers";
+import { DesignerList2ComponentModule } from '@designers2';
+import { FirebaseEmployees2ServiceModule } from '../../../projects/designers2/src/lib/adapters/secondary/infrastructure/firebase-employees2.service-module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { DesignersListComponentModule } from "@designers";
         component: EmployeesPage,
       },
     ]),
-    DesignersListComponentModule,
+    DesignerList2ComponentModule,
+    FirebaseEmployees2ServiceModule
   ],
   declarations: [EmployeesPage],
   providers: [],
