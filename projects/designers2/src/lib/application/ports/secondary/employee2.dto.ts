@@ -1,7 +1,7 @@
 import { Department2DTO } from "./department2.dto";
 
 export interface Employee2DTO {
-  readonly nema: string;
+  readonly name: string;
   readonly bio: string;
   readonly id: string;
   readonly firstName: string;
