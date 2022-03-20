@@ -1,13 +1,14 @@
-import { Injectable } from "@angular/core";
-import { AngularFirestore } from "@angular/fire/firestore";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { GetsAllEmployee2DtoPort } from "../../../application/ports/secondary/gets-all-employee2.dto-port";
-import { Employee2DTO } from "../../../application/ports/secondary/employee2.dto";
-import { filterByCriterion } from "@lowgular/shared";
+import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { GetsAllEmployee2DtoPort } from '../../../application/ports/secondary/gets-all-employee2.dto-port';
+import { Employee2DTO } from '../../../application/ports/secondary/employee2.dto';
+import { filterByCriterion } from '@lowgular/shared';
+import { AddsEmployee2DtoPort } from '../../../application/ports/secondary/adds-employee2.dto-port';
 
 @Injectable()
-export class FirebaseEmployees2Service implements GetsAllEmployee2DtoPort {
+export class FirebaseEmployees2Service implements GetsAllEmployee2DtoPort, AddsEmployee2DtoPort {
   constructor(private _client: AngularFirestore) {}
 
   getAll(criterion: Partial<Employee2DTO>): Observable<Employee2DTO[]> {
@@ -27,5 +28,9 @@ export class FirebaseEmployees2Service implements GetsAllEmployee2DtoPort {
           })),
         ),
         map((data: Employee2DTO[]) => filterByCriterion(data, criterion)));
+  }
+
+  add(employee2: Partial<Employee2DTO>): void {
+    this._client.collection('designers-list').add(employee2);
   }
 }
