@@ -1,1 +1,29 @@
-<h2>test form</h2>
+<form>
+    <div class="formDiv">
+        <label class="label fs-5 d-block mt-2">Imię: <input type="text" name="firstName" required style="width: 100%"/></label>
+        <label class="label fs-5 d-block mt-2">Nazwisko: <input type="text" name="lastName" required style="width: 100%"/></label>
+        <label class="label fs-5 d-block mt-2">E-mail: <input type="email" name="email" required style="width: 100%"/></label>
+        <label class="label fs-5 d-block mt-2">Hasło: <input type="password" name="password" minlength="8" required style="width: 100%"/></label>
+    </div>
+    <div class="formDiv">
+        <label class="label fs-5 d-block mt-2"><input type="radio" name="clientType" required /> Klient indywidualny</label>
+        <label class="label fs-5 d-block"><input type="radio" name="clientType" required /> Klient biznesowy</label>
+   
+        <label class="label fs-5 d-block mt-4"><input type="checkbox" name="checkbox" required /> Zapoznałem się z <a href ="#">regulaminem.</a></label>
+    </div>
+    <div class="formDiv">
+        <label class="label fs-5 d-block mt-4">Wybierz pomieszczenie do remontu: 
+            <select>
+                <option value="" name="room">(wybierz jedno)</option>
+                <option value="1" name="room">Łazienka</option>
+                <option value="2" name="room">Kuchnia</option>
+                <option value="3" name="room">Pokój dziecięcy</option>
+            </select>
+        </label> 
+
+        <label class="label fs-5 d-block mt-4">Dodaj plan pomieszczenia: <input class="file mt-2 mb-4 fs-6 d-block" type="file" name="planFile" /></label>
+
+        <label class="label fs-5 d-block mt-4">Dodatkowe informacje: <textarea class="textarea fs-6 d-block mt-1 w-100" name="info" rows="5" placeholder="np. Twój ulubiony styl"></textarea></label>
+    </div>
+        <input class="submit fs-4 mt-5" type="submit" value="Zapisz" />
+</form>
