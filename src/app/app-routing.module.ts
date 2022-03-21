@@ -7,7 +7,7 @@ import { ContactUsPageModule } from "./pages/contact-us.page-module";
 import { OurProjectsPageModule } from "./pages/our-projects.page-module";
 import { EmployeeDetail2ComponentModule } from "@designers2";
 import { AdminPageModule } from "./pages/admin.page-module";
-
+import { FormPageModule } from './pages/form.page-module';
 
 const routes: Routes = [
   {
@@ -40,6 +40,10 @@ const routes: Routes = [
     path: "admin",
     loadChildren: () => AdminPageModule,
   },
+  { 
+        path: 'form', 
+        loadChildren: () => FormPageModule
+      }
 ];
 
 @NgModule({

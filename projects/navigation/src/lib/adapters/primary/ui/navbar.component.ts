@@ -39,5 +39,10 @@ export class NavbarComponent {
       link: "/kontakt",
       nav: "Kontakt",
     },
+    {
+      id: "6",
+      link: "/form",
+      nav: "Rejestracja",
+    },
   ])
 }
