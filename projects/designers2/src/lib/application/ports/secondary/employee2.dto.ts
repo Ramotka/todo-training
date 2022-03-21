@@ -6,6 +6,5 @@ export interface Employee2DTO {
   readonly id: string;
   readonly firstName: string;
   readonly imageUrl: string;
-  readonly alt: string;
   readonly department: Department2DTO;
 }

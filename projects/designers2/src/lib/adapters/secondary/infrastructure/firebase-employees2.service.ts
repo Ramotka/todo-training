@@ -21,7 +21,6 @@ export class FirebaseEmployees2Service implements GetsAllEmployee2DtoPort, AddsE
             name: employee.name,
             firstName: employee.firstName,
             bio: employee.description,
-            alt: employee.alt,
             imageUrl: employee.imageUrl,
             id: employee.it,
             department: employee.department
