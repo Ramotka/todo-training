@@ -1,8 +1,21 @@
-<h2>Test formularza</h2>
-<form [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
+<!-- <form [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
     <input type="text" formControlName="name" placeholder="Imię i nazwisko">
     <input type="text" formControlName="imageUrl" placeholder="Zdjęcie">
     <input type="text" formControlName="bio" placeholder="Opis">
     <input type="text" formControlName="firstName" placeholder="First Name">
     <input type="submit" value="Submit">
-</form>
+</form> -->
+
+<!-- <div class="container"> -->
+<div class="card" style="width: 18rem;">
+    <form [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><input type="text" formControlName="name" placeholder="Imię i nazwisko" style="width: 100%"></li>
+      <li class="list-group-item"><input type="text" formControlName="imageUrl" placeholder="Zdjęcie" style="width: 100%"></li>
+      <li class="list-group-item"><input type="text" formControlName="bio" placeholder="Opis" style="width: 100%"></li>
+      <li class="list-group-item"><input type="text" formControlName="firstName" placeholder="First Name" style="width: 100%"></li>
+      <li class="list-group-item"><input type="submit" value="Dodaj"></li>
+    </ul>
+    </form>
+  </div>
+<!-- </div> -->
