@@ -20,7 +20,7 @@ export class FirebaseEmployees2Service implements GetsAllEmployee2DtoPort, AddsE
           data.map((employee) => ({
             name: employee.name,
             firstName: employee.firstName,
-            bio: employee.description,
+            bio: employee.bio,
             imageUrl: employee.imageUrl,
             id: employee.it,
             department: employee.department

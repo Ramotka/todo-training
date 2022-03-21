@@ -1,1 +1,8 @@
 <h2>Test formularza</h2>
+<form [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
+    <input type="text" formControlName="name" placeholder="Imię i nazwisko">
+    <input type="text" formControlName="imageUrl" placeholder="Zdjęcie">
+    <input type="text" formControlName="bio" placeholder="Opis">
+    <input type="text" formControlName="firstName" placeholder="First Name">
+    <input type="submit" value="Submit">
+</form>
