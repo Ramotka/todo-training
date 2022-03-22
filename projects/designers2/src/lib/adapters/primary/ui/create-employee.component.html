@@ -1,21 +1,9 @@
-<!-- <form [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
-    <input type="text" formControlName="name" placeholder="Imię i nazwisko">
-    <input type="text" formControlName="imageUrl" placeholder="Zdjęcie">
-    <input type="text" formControlName="bio" placeholder="Opis">
-    <input type="text" formControlName="firstName" placeholder="First Name">
-    <input type="submit" value="Submit">
-</form> -->
+<h2>Dodaj pracownika:</h2>
+<form id="registration-form" [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
+    <label class="form-label">Imię i nazwisko: <input type="text" formControlName="name" style="width: 100%" required></label>
+    <label class="form-label">Zdjęcie: <input type="text" formControlName="imageUrl" style="width: 100%" required></label>
+    <label class="form-label">Opis: <input type="text" formControlName="bio" style="width: 100%" required></label>
+    <label class="form-label">Link: <input type="text" formControlName="firstName" style="width: 100%" required></label>
+    <input class="submit p-1 mt-3" type="submit" value="Dodaj">
+</form>
 
-<!-- <div class="container"> -->
-<div class="card" style="width: 18rem;">
-    <form [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><input type="text" formControlName="name" placeholder="Imię i nazwisko" style="width: 100%" required></li>
-      <li class="list-group-item"><input type="text" formControlName="imageUrl" placeholder="Zdjęcie" style="width: 100%" required></li>
-      <li class="list-group-item"><input type="text" formControlName="bio" placeholder="Opis" style="width: 100%" required></li>
-      <li class="list-group-item"><input type="text" formControlName="firstName" placeholder="First Name" style="width: 100%" required></li>
-      <li class="list-group-item"><input type="submit" value="Dodaj"></li>
-    </ul>
-    </form>
-  </div>
-<!-- </div> -->
