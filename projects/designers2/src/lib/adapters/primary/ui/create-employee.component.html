@@ -2,8 +2,12 @@
 <form id="registration-form" [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
     <label class="form-label">Imię i nazwisko: <input type="text" formControlName="name" style="width: 100%" required></label>
     <label class="form-label">Zdjęcie: <input type="text" formControlName="imageUrl" style="width: 100%" required></label>
-    <label class="form-label">Opis: <input type="text" formControlName="bio" style="width: 100%" required></label>
     <label class="form-label">Link: <input type="text" formControlName="firstName" style="width: 100%" required></label>
+    <div formGroupName="department">
+        <label class="form-label">Numer pracownika: <input type="text" formControlName="employeeCount" style="width: 100%" required></label>
+        <label class="form-label">Nazwa działu: <input type="text" formControlName="name" style="width: 100%" required></label>
+    </div>
+    <label class="form-label">Opis: <input type="text" formControlName="bio" style="width: 100%" required></label>
     <input class="submit p-1 mt-3" type="submit" value="Dodaj">
 </form>
 
