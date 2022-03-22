@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { ContactUsPage } from "./contact-us.page";
-import { ContactFormComponentModule } from "@messages";
+import { ContactFormComponentModule, FirebaseMessagesServiceModule } from "@messages";
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { ContactFormComponentModule } from "@messages";
         component: ContactUsPage,
       },
     ]),
-    ContactFormComponentModule,
+    ContactFormComponentModule, FirebaseMessagesServiceModule,
   ],
   declarations: [ContactUsPage],
   providers: [],
