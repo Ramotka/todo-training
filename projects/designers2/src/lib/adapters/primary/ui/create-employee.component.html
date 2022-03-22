@@ -1,3 +1,4 @@
+<div class="container" id="form-page">
 <h2>Dodaj pracownika:</h2>
 <form id="registration-form" [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
     <label class="form-label">Imię i nazwisko: <input type="text" formControlName="name" style="width: 100%" required></label>
@@ -10,4 +11,7 @@
     <label class="form-label">Opis: <input type="text" formControlName="bio" style="width: 100%" required></label>
     <input class="submit p-1 mt-3" type="submit" value="Dodaj">
 </form>
-
+<div style="margin-top: 5%; margin-bottom: 5%; border-bottom: 3px solid #ECDBA1"></div>
+<h3>Dodani pracownicy:</h3>
+<ul><li *ngFor="let employee of employeeList$ | async" style="text-align: left">{{ employee.name }}</li></ul>
+</div>

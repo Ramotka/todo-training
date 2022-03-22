@@ -1,14 +1,9 @@
-import { FormGroup, FormControl } from "@angular/forms";
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Inject,
-} from "@angular/core";
-import {
-  ADDS_EMPLOYEE2_DTO,
-  AddsEmployee2DtoPort,
-} from "../../../application/ports/secondary/adds-employee2.dto-port";
+import { FormGroup, FormControl } from '@angular/forms';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ADDS_EMPLOYEE2_DTO, AddsEmployee2DtoPort } from '../../../application/ports/secondary/adds-employee2.dto-port';
+import { Employee2DTO } from '../../../application/ports/secondary/employee2.dto';
+import { GETS_ALL_EMPLOYEE2_DTO, GetsAllEmployee2DtoPort } from '../../../application/ports/secondary/gets-all-employee2.dto-port';
 
 @Component({
   selector: "lib-create-employee",
@@ -27,8 +22,7 @@ export class CreateEmployeeComponent {
       employeeCount: new FormControl(),
     }),
   });
-
-
+  employeeList$: Observable<Employee2DTO[]> = this._getsAllEmployee2Dto.getAll();
 
   onCreateEmployeeFormSubmited(createEmployeeForm: FormGroup): void {
     if(createEmployeeForm.invalid)
@@ -39,6 +33,6 @@ export class CreateEmployeeComponent {
     this.createEmployeeForm.reset();
   }
   constructor(
-    @Inject(ADDS_EMPLOYEE2_DTO) private _addsEmployee2Dto: AddsEmployee2DtoPort
+    @Inject(ADDS_EMPLOYEE2_DTO) private _addsEmployee2Dto: AddsEmployee2DtoPort, @Inject(GETS_ALL_EMPLOYEE2_DTO) private _getsAllEmployee2Dto: GetsAllEmployee2DtoPort
   ) {}
 }
