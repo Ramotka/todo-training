@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormPage } from './form.page';
-import { FormComponentModule } from '@form';
+import { FirebaseFormServiceModule, FormComponentModule } from '@form';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -11,7 +11,8 @@ import { FormComponentModule } from '@form';
           component: FormPage,
         }
       ]),
-    FormComponentModule
+    FormComponentModule,
+    FirebaseFormServiceModule
     ],
   	declarations: [FormPage],
   	providers: [],

@@ -1,17 +1,17 @@
-<form id="registration-form">
+<form id="registration-form" [formGroup]="createForm" (ngSubmit)="onCreateFormSubmited(createForm)">
     <fieldset>
-        <label class="form-label">Imię: <input type="text" name="firstName" required style="width: 100%"/></label>
-        <label class="form-label">Nazwisko: <input type="text" name="lastName" required style="width: 100%"/></label>
-        <label class="form-label">E-mail: <input type="email" name="email" required style="width: 100%"/></label>
-        <label class="form-label">Hasło: <input type="password" name="password" minlength="8" required style="width: 100%"/></label>
+        <label class="form-label">Imię: <input type="text" formControlName="firstName" required style="width: 100%"/></label>
+        <label class="form-label">Nazwisko: <input type="text" formControlName="lastName" required style="width: 100%"/></label>
+        <label class="form-label">E-mail: <input type="email" formControlName="email" required style="width: 100%"/></label>
+        <label class="form-label">Hasło: <input type="password" formControlName="password" minlength="8" required style="width: 100%"/></label>
     </fieldset>
     <fieldset>
-        <label class="form-label"><input type="radio" name="clientType" required /> Klient indywidualny</label>
-        <label class="form-label"><input type="radio" name="clientType" required /> Klient biznesowy</label>
-        <label class="form-label"><input type="checkbox" name="checkbox" required /> Zapoznałem się z <a href ="#">regulaminem.</a></label>
+        <label class="form-label"><input type="radio" formControlName="clientType" required /> Klient indywidualny</label>
+        <label class="form-label"><input type="radio" formControlName="clientType" required /> Klient biznesowy</label>
+        <label class="form-label"><input type="checkbox" formControlName="checkbox" required /> Zapoznałem się z <a href ="#">regulaminem.</a></label>
     </fieldset>
     <fieldset>
-        <label class="form-label" name="room">Wybierz pomieszczenie do remontu: 
+        <label class="form-label" formControlName="room">Wybierz pomieszczenie do remontu: 
             <select>
                 <option value="">(wybierz jedno)</option>
                 <option value="1">Łazienka</option>
@@ -19,8 +19,9 @@
                 <option value="3">Pokój dziecięcy</option>
             </select>
         </label> 
-        <label class="form-label">Dodaj plan pomieszczenia: <input class="file" type="file" name="planFile" /></label>
-        <label class="form-label">Dodatkowe informacje: <textarea class="textarea fs-6 d-block mt-1 w-100" name="info" rows="5" placeholder="np. Twój ulubiony styl"></textarea></label>
+        <label class="form-label">Dodaj plan pomieszczenia: <input class="file" type="file" formControlName="planFile" /></label>
+        <label class="form-label">Dodatkowe informacje: <textarea class="textarea fs-6 d-block mt-1 w-100" formControlName="info" rows="5" placeholder="np. Twój ulubiony styl"></textarea></label>
     </fieldset>
         <input class="submit p-1 mt-3" type="submit" value="Zapisz" />
 </form>
+
