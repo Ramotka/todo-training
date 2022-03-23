@@ -1,4 +1,4 @@
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ADDS_EMPLOYEE2_DTO, AddsEmployee2DtoPort } from '../../../application/ports/secondary/adds-employee2.dto-port';
@@ -13,26 +13,41 @@ import { GETS_ALL_EMPLOYEE2_DTO, GetsAllEmployee2DtoPort } from '../../../applic
 })
 export class CreateEmployeeComponent {
   readonly createEmployeeForm: FormGroup = new FormGroup({
-    name: new FormControl(),
-    imageUrl: new FormControl(),
-    bio: new FormControl(),
-    firstName: new FormControl(),
-    department: new FormGroup({
-      name: new FormControl(),
-      employeeCount: new FormControl(),
-    }),
+    name: new FormControl(null, [Validators.required]),
+    imageUrl: new FormControl(null, [Validators.required]),
+    bio: new FormControl(null, [Validators.required]),
+    firstName: new FormControl(null, [Validators.required]),
+    departmentName: new FormControl(),
+    employeeCount: new FormControl(null, [Validators.required]),
   });
   employeeList$: Observable<Employee2DTO[]> = this._getsAllEmployee2Dto.getAll();
 
   onCreateEmployeeFormSubmited(createEmployeeForm: FormGroup): void {
     if(createEmployeeForm.invalid)
     {
+      alert('Uzupełnij puste pola');
       return;
     }
-    this._addsEmployee2Dto.add(createEmployeeForm.getRawValue());
+    this._addsEmployee2Dto.add({
+      name: createEmployeeForm.get('name').value,
+      imageUrl: createEmployeeForm.get('imageUrl').value,
+      bio: createEmployeeForm.get('bio').value,
+      firstName: createEmployeeForm.get('firstName').value,
+      department: {
+        name: createEmployeeForm.get('departmentName').value,
+        employeeCount: createEmployeeForm.get('employeeCount').value,
+      },
+    });
     this.createEmployeeForm.reset();
   }
   constructor(
     @Inject(ADDS_EMPLOYEE2_DTO) private _addsEmployee2Dto: AddsEmployee2DtoPort, @Inject(GETS_ALL_EMPLOYEE2_DTO) private _getsAllEmployee2Dto: GetsAllEmployee2DtoPort
   ) {}
 }
+
+
+// department: new FormGroup({
+//   name: new FormControl(),
+//   employeeCount: new FormControl(),
+// }),
+// this._addsEmployee2Dto.add(createEmployeeForm.getRawValue());

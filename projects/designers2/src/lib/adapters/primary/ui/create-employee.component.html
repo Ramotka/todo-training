@@ -1,14 +1,19 @@
 <div class="container" id="form-page">
 <h2>Dodaj pracownika:</h2>
 <form id="registration-form" [formGroup]="createEmployeeForm" (ngSubmit)="onCreateEmployeeFormSubmited(createEmployeeForm)">
-    <label class="form-label">Imię i nazwisko: <input type="text" formControlName="name" style="width: 100%" required></label>
-    <label class="form-label">Zdjęcie: <input type="text" formControlName="imageUrl" style="width: 100%" required></label>
-    <label class="form-label">Link: <input type="text" formControlName="firstName" style="width: 100%" required></label>
-    <div formGroupName="department">
-        <label class="form-label">Numer pracownika: <input type="text" formControlName="employeeCount" style="width: 100%" required></label>
-        <label class="form-label">Nazwa działu: <input type="text" formControlName="name" style="width: 100%" required></label>
-    </div>
-    <label class="form-label">Opis: <input type="text" formControlName="bio" style="width: 100%" required></label>
+    <label class="form-label">Imię i nazwisko: <input type="text" formControlName="name" style="width: 100%"></label>
+    <label class="form-label">Zdjęcie: <input type="text" formControlName="imageUrl" style="width: 100%"></label>
+    <label class="form-label">Link: <input type="text" formControlName="firstName" style="width: 100%"></label>
+    <label class="form-label">Numer pracownika: <input type="text" formControlName="employeeCount" style="width: 100%"></label>
+    <label class="form-label">Nazwa działu: 
+        <select formControlName="departmentName" style="width: 100%">
+            <option value="Łazienki">Łazienki</option>
+            <option value="Kuchnie">Kuchnie</option>
+            <option value="Pokój dziecięcy">Pokój dziecięcy</option>
+            <option value="Dokumentacja">Dokumentacja</option>
+        </select>
+    </label> 
+    <label class="form-label">Opis: <textarea class="textarea fs-6 d-block mt-1 w-100" formControlName="bio" rows="5" placeholder="Wpisz biografię..."></textarea></label>
     <input class="submit p-1 mt-3" type="submit" value="Dodaj">
 </form>
 <div style="margin-top: 5%; margin-bottom: 5%; border-bottom: 3px solid #ECDBA1"></div>

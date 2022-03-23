@@ -1,14 +1,14 @@
 <form id="registration-form" [formGroup]="createForm" (ngSubmit)="onCreateFormSubmited(createForm)">
     <fieldset>
-        <label class="form-label">Imię: <input type="text" formControlName="firstName" required style="width: 100%"/></label>
-        <label class="form-label">Nazwisko: <input type="text" formControlName="lastName" required style="width: 100%"/></label>
-        <label class="form-label">E-mail: <input type="email" formControlName="email" required style="width: 100%"/></label>
-        <label class="form-label">Hasło: <input type="password" formControlName="password" minlength="8" required style="width: 100%"/></label>
+        <label class="form-label">Imię: <input type="text" formControlName="firstName" style="width: 100%"/></label>
+        <label class="form-label">Nazwisko: <input type="text" formControlName="lastName" style="width: 100%"/></label>
+        <label class="form-label">E-mail: <input type="email" formControlName="email" style="width: 100%"/></label>
+        <label class="form-label">Hasło: <input type="password" formControlName="password" style="width: 100%"/></label>
     </fieldset>
     <fieldset>
-        <label class="form-label"><input type="radio" formControlName="clientType" required /> Klient indywidualny</label>
-        <label class="form-label"><input type="radio" formControlName="clientType" required /> Klient biznesowy</label>
-        <label class="form-label"><input type="checkbox" formControlName="checkbox" required /> Zapoznałem się z <a href ="#">regulaminem.</a></label>
+        <label class="form-label"><input type="radio" formControlName="clientType" /> Klient indywidualny</label>
+        <label class="form-label"><input type="radio" formControlName="clientType" /> Klient biznesowy</label>
+        <label class="form-label"><input type="checkbox" formControlName="checkbox" /> Zapoznałem się z <a href ="#">regulaminem.</a></label>
     </fieldset>
     <fieldset>
         <label class="form-label" formControlName="room">Wybierz pomieszczenie do remontu: 
