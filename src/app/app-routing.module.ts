@@ -5,9 +5,9 @@ import { HomePageModule } from "./pages/home.page-module";
 import { EmployeesPageModule } from "./pages/employees.page-module";
 import { ContactUsPageModule } from "./pages/contact-us.page-module";
 import { OurProjectsPageModule } from "./pages/our-projects.page-module";
-import { EmployeeDetail2ComponentModule } from "@designers2";
 import { AdminPageModule } from "./pages/admin.page-module";
 import { FormPageModule } from './pages/form.page-module';
+import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
 
 const routes: Routes = [
   {
@@ -25,8 +25,8 @@ const routes: Routes = [
     loadChildren: () => EmployeesPageModule,
   },
   {
-    path: "pracownik/:name",
-    loadChildren: () => EmployeeDetail2ComponentModule,
+    path: "pracownik/:employeeId",
+    loadChildren: () => EmployeeDetailsPageModule,
   },
   {
     path: "kontakt",
@@ -41,9 +41,10 @@ const routes: Routes = [
     loadChildren: () => AdminPageModule,
   },
   { 
-        path: 'form', 
-        loadChildren: () => FormPageModule
-      }
+    path: 'form', 
+    loadChildren: () => FormPageModule
+  },
+
 ];
 
 @NgModule({
