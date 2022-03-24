@@ -10,18 +10,18 @@ import { GETS_ALL_EMPLOYEE2_DTO, GetsAllEmployee2DtoPort } from '../../../applic
   templateUrl: "./create-employee.component.html",
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ["./create-employee.component.scss"],
 })
 export class CreateEmployeeComponent {
   readonly createEmployeeForm: FormGroup = new FormGroup({
-    name: new FormControl(null, [Validators.required]),
-    imageUrl: new FormControl(null, [Validators.required]),
-    bio: new FormControl(null, [Validators.required]),
-    firstName: new FormControl(null, [Validators.required]),
+    name: new FormControl('', [Validators.required]),
+    imageUrl: new FormControl('', [Validators.required]),
+    bio: new FormControl('', [Validators.required]),
+    firstName: new FormControl('', [Validators.required]),
     departmentName: new FormControl(),
-    employeeCount: new FormControl(null, [Validators.required]),
+    employeeCount: new FormControl('', [Validators.required]),
   });
   employeeList$: Observable<Employee2DTO[]> = this._getsAllEmployee2Dto.getAll();
-
   onCreateEmployeeFormSubmited(createEmployeeForm: FormGroup): void {
     if(createEmployeeForm.invalid)
     {
@@ -29,13 +29,13 @@ export class CreateEmployeeComponent {
       return;
     }
     this._addsEmployee2Dto.add({
-      name: createEmployeeForm.get('name').value,
-      imageUrl: createEmployeeForm.get('imageUrl').value,
-      bio: createEmployeeForm.get('bio').value,
-      firstName: createEmployeeForm.get('firstName').value,
+      name: createEmployeeForm?.get('name')?.value,
+      imageUrl: createEmployeeForm?.get('imageUrl')?.value,
+      bio: createEmployeeForm?.get('bio')?.value,
+      firstName: createEmployeeForm?.get('firstName')?.value,
       department: {
-        name: createEmployeeForm.get('departmentName').value,
-        employeeCount: createEmployeeForm.get('employeeCount').value,
+        name: createEmployeeForm?.get('departmentName')?.value,
+        employeeCount: createEmployeeForm?.get('employeeCount')?.value,
       },
     });
     this.createEmployeeForm.reset();
