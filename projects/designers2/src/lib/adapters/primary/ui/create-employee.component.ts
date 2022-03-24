@@ -10,7 +10,7 @@ import { GETS_ALL_EMPLOYEE2_DTO, GetsAllEmployee2DtoPort } from '../../../applic
   templateUrl: "./create-employee.component.html",
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ["./create-employee.component.scss"],
+  // styleUrls: ["./create-employee.component.scss"],
 })
 export class CreateEmployeeComponent {
   readonly createEmployeeForm: FormGroup = new FormGroup({
