@@ -1,4 +1,62 @@
-<!-- <h1>Imię projektanta: </h1> -->
+<h1 class="m-3 text-center">Poznaj naszego projektanta: </h1>
 <!-- <h2>{{ (params$ | async)?.name }}</h2> -->
-<h1>Imię projektanta: </h1>
-<h2>{{ employee$ | async | json}}</h2>
+<!-- <h2>{{ employee$ | async | json}}</h2> -->
+<div class="container p-5" style="background-color: #E6E2E0">
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed bg-success text-white fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Imię i nazwisko
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">{{(employee$ | async).name}}</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed bg-success text-white fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Biografia
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">{{(employee$ | async).bio}}</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed bg-success text-white fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Zdjęcie
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"><img [src]="(employee$ | async).imageUrl" [alt]="(employee$ | async).name" style="width: 40vh"></div>
+      </div>
+    </div>
+  </div>
+  <p class="mt-5 text-center">
+    <a class="btn btn-primary bg-dark m-2 fs-4" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Dział</a>
+    <button class="btn btn-primary bg-dark m-2 fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Numer pracownika</button>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          {{(employee$ | async).department.name}}
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          {{(employee$ | async).department.employeeCount}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

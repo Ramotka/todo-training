@@ -7,7 +7,7 @@
                 <p class="fs-5">{{ employee.bio }}</p>
                 <p class="fs-5"><b>Dział: </b>{{ employee.department.name }}</p>
                 <p class="fs-5"><b>Numer pracownika: </b>{{ employee.department.employeeCount }}</p>
-                <a routerLink="/pracownik/{{employee.firstName}}" class="btn fs-5 btn-light">Kontakt</a>
+                <a [routerLink]="'/pracownik/'+employee.id" class="btn fs-5 btn-light">Kontakt</a>
             </div>
         </div>
     </div>

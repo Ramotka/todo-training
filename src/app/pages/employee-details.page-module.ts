@@ -9,7 +9,7 @@ import { EmployeeDetail2ComponentModule, FirebaseEmployees2ServiceModule } from 
     CommonModule,
     RouterModule.forChild([
       {
-        path: "",
+        path: ":employeeId",
         component: EmployeeDetailsPage,
       },
     ]),

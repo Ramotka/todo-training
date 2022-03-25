@@ -27,7 +27,7 @@ export class FirebaseEmployees2Service
             firstName: employee.firstName,
             bio: employee.bio,
             imageUrl: employee.imageUrl,
-            id: employee.it,
+            id: employee.id,
             department: employee.department,
           }))
         ),

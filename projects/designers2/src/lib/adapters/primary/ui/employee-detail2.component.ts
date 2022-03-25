@@ -23,6 +23,7 @@ export class EmployeeDetail2Component {
 
   employee$: Observable<Employee2DTO> = this._getsOneEmployee2Dto.getOne(
     this._activatedRoute.snapshot.params.employeeId
+    // '9OPINmbiBIuSwKr9k9zC'
 );
 
   constructor(
@@ -31,3 +32,4 @@ export class EmployeeDetail2Component {
     private _activatedRoute: ActivatedRoute
   ) {}
 }
+
