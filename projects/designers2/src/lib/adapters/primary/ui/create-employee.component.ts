@@ -46,8 +46,3 @@ export class CreateEmployeeComponent {
 }
 
 
-// department: new FormGroup({
-//   name: new FormControl(),
-//   employeeCount: new FormControl(),
-// }),
-// this._addsEmployee2Dto.add(createEmployeeForm.getRawValue());

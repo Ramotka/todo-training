@@ -38,16 +38,3 @@ export class EmployeeDetail2Component {
   ) {}
 }
 
-// export class EmployeeDetail2Component {
-
-//   employee$: Observable<Employee2DTO> = this._getsOneEmployee2Dto.getOne(
-//     this._activatedRoute.snapshot.params.employeeId
-//     // '9OPINmbiBIuSwKr9k9zC'
-// );
-
-//   constructor(
-//     @Inject(GETS_ONE_EMPLOYEE2_DTO)
-//     private _getsOneEmployee2Dto: GetsOneEmployee2DtoPort,
-//     private _activatedRoute: ActivatedRoute
-//   ) {}
-
