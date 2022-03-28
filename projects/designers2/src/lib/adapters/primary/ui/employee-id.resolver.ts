@@ -17,10 +17,7 @@ export class EmployeeIdResolver implements Resolve<boolean> {
     private _contextDtoStorage: ContextDtoStoragePort
   ) {}
 
-  resolve(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     this._contextDtoStorage.next({ employeeId: route.params.employeeId });
     return of(true);
   }
