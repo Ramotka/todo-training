@@ -10,7 +10,8 @@ import { FirebaseEmployees2ServiceModule } from '../../secondary/infrastructure/
 		  path: '',
 		  component: EmployeeDetail2Component,
 		}
-	  ])],
+	  ])
+],
   	declarations: [EmployeeDetail2Component],
   	providers: [],
   	exports: [EmployeeDetail2Component] })
