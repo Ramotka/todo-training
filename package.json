@@ -21,7 +21,9 @@
     "@angular/platform-browser-dynamic": "~11.2.4",
     "@angular/router": "~11.2.4",
     "@lowgular/shared": "^0.0.7",
+    "bootstrap": "^5.1.3",
     "firebase": "^7.0 || ^8.0",
+    "ngx-bootstrap": "^7.1.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

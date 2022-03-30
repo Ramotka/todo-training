@@ -32,3 +32,9 @@ fieldset:not(:last-of-type) {
   border-bottom: 3px solid #3b3b4f;
   padding-bottom: 5%;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
